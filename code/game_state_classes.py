@@ -313,7 +313,7 @@ class Game_state:
 
         except EngineTerminatedError:
             print('restart')
-            self.engine = chess.engine.SimpleEngine.popen_uci("engine/stockfish-11-64")
+            self.engine = chess.engine.SimpleEngine.popen_uci("engine/stockfish-13-64")
             # self.engine = chess.engine.SimpleEngine.popen_uci("engine/komodo-11.01-64-osx")
 
             return 0,0
