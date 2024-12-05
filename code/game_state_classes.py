@@ -46,7 +46,7 @@ class Game_state:
         self.expected_move_to_detect = "" #This variable stores the move we should see next, if we don't see the right one in the next iteration, we wait and try again. This solves the slow transition problem: for instance, starting with e2e4, the screenshot can happen when the pawn is on e3, that is a possible position. We always have to double check that the move is done.
         self.previous_chessboard_image = [] #Storing the chessboard image from previous iteration
         self.executed_moves = [] #Store the move detected on san format
-        self.engine = chess.engine.SimpleEngine.popen_uci("engine/stockfish-11-64")
+        self.engine = chess.engine.SimpleEngine.popen_uci("engine/stockfish-13-64")
         # self.engine = chess.engine.SimpleEngine.popen_uci("engine/komodo-11.01-64-osx")
         self.board = chess.Board() #This object comes from the "chess" package, the moves are stored inside it (and it has other cool features such as showing all the "legal moves")
         self.board_position_on_screen = []
